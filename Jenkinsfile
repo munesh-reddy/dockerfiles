@@ -7,12 +7,6 @@ dockerImage = ''
 }
 agent any
 stages {
-stage('Cloning our Git') {
-steps {
-credentialsId: gitCredentialId,
-git 'https://github.com/munesh-reddy/dockerfiles.git'
-}
-}
 stage('Building our image') {
 steps{
 script {
