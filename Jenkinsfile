@@ -1,5 +1,6 @@
 pipeline {
 environment {
+gitCredentialId = 'git'
 registry = "munesh777/poc"
 registryCredential = 'Docker'
 dockerImage = ''
@@ -8,7 +9,7 @@ agent any
 stages {
 stage('Cloning our Git') {
 steps {
-credentialsId: 'git',
+credentialsId: gitCredentialId,
 git 'https://github.com/munesh-reddy/dockerfiles.git'
 }
 }
