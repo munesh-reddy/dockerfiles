@@ -8,6 +8,7 @@ agent any
 stages {
 stage('Cloning our Git') {
 steps {
+credentialsId: 'git',
 git 'https://github.com/munesh-reddy/dockerfiles.git'
 }
 }
